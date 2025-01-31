@@ -7,12 +7,14 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lin100101</copyright><atom:link href="https://Lin100101.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test</title>
-        <link>https://Lin100101.github.io/categories/test/</link>
+        <title>Java</title>
+        <link>https://Lin100101.github.io/categories/java/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Lin100101.github.io/categories/test/</guid>
-        <description>&lt;img src="https://Lin100101.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://Lin100101.github.io/categories/java/</guid>
+        <description>&lt;img src="https://Lin100101.github.io/categories/java/Java.png" alt="Featured image of post Java" /&gt;&lt;h1 id=&#34;欢迎来到java分类界面&#34;&gt;欢迎来到Java分类界面
+&lt;/h1&gt;&lt;p&gt;在这里，我相信无论你是初学者还是有经验的开发者，都可以在这里发现有价值的内容。&lt;/p&gt;
+</description>
         </item>
         
     </channel>
