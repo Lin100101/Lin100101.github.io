@@ -21,7 +21,20 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://Lin100101.github.io/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
+        <description>&lt;h1 id=&#34;关于我&#34;&gt;关于我
+&lt;/h1&gt;&lt;p&gt;你好！我是Lin100101，欢迎来到我的个人博客。在这里，我会分享一些关于编程的想法、经验和学习笔记。希望通过这些分享能够帮助到有相同兴趣的朋友，并与大家交流心得。&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景
+&lt;/h2&gt;&lt;p&gt;我目前是一名主修软件工程专业的本科学生。&lt;/p&gt;
+&lt;h2 id=&#34;博客目的&#34;&gt;博客目的
+&lt;/h2&gt;&lt;p&gt;创建这个博客的主要目的是为了记录我的成长历程、分享所学知识以及探索过程中的点滴。&lt;/p&gt;
+&lt;h2 id=&#34;联系方式&#34;&gt;联系方式
+&lt;/h2&gt;&lt;p&gt;如果你对我的文章有任何疑问或建议，或者只是想打个招呼，请随时通过以下方式联系我：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;邮箱: &lt;a class=&#34;link&#34; href=&#34;mailto:2410348705@qq.com&#34; &gt;2410348705@qq.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Lin100101&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lin100101 (Lin100101)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢你的访问和支持！希望你能在这个博客中找到对你有用的信息。&lt;/p&gt;
 </description>
         </item>
         <item>
