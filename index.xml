@@ -7,17 +7,55 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lin100101</copyright>
-        <lastBuildDate>Mon, 24 Feb 2025 19:31:19 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test002</title>
-        <link>https://Lin100101.github.io/p/test002/</link>
-        <pubDate>Mon, 24 Feb 2025 19:31:19 +0800</pubDate>
+        <lastBuildDate>Wed, 26 Feb 2025 18:30:15 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>探索Java：无Public类时的文件命名与执行指南</title>
+        <link>https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Wed, 26 Feb 2025 18:30:15 +0800</pubDate>
         
-        <guid>https://Lin100101.github.io/p/test002/</guid>
-        <description>&lt;p&gt;11111111&lt;/p&gt;
-&lt;p&gt;22222222&lt;/p&gt;
-&lt;p&gt;33333333&lt;/p&gt;
-&lt;h4 id=&#34;54445227171818&#34;&gt;54445227171818
-&lt;/h4&gt;</description>
+        <guid>https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;h5 id=&#34;java作为一种广泛使用的面向对象编程语言其设计和规范中包含了一系列严格的文件和类命名规则这些规则对于确保代码的可读性可维护性和互操作性至关重要&#34;&gt;Java作为一种广泛使用的面向对象编程语言，其设计和规范中包含了一系列严格的文件和类命名规则。这些规则对于确保代码的可读性、可维护性和互操作性至关重要。
+&lt;/h5&gt;&lt;p&gt;例如：如果一个 Java 文件中包含了一个 &lt;code&gt;public&lt;/code&gt; 类，那么这个文件的名称必须与这个 &lt;code&gt;public&lt;/code&gt; 类的名称完全相同。这是Java语言的一个强制性规则。例如，如果你有一个 &lt;code&gt;public class SimpleDemo&lt;/code&gt;，那么这个类必须保存在名为 &lt;code&gt;SimpleDemo.java&lt;/code&gt; 的文件中。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SimpleDemo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;这是一个简单的Java程序。&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在这种情况下，编译完后的class文件名也是SimpleDemo。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;如果-java-文件中没有-public-类则文件名可以是任意的尽管通常的做法是根据文件中最重要的类来命名文件以提高代码的可读性和可维护性&#34;&gt;如果 Java 文件中没有 &lt;code&gt;public&lt;/code&gt; 类，则文件名可以是任意的，尽管通常的做法是根据文件中最重要的类来命名文件，以提高代码的可读性和可维护性。
+&lt;/h6&gt;&lt;p&gt;此时我们要把一个包含有一个名叫SimpleDemo非public的类的Java文件名改成test.java,这种操作是没错的，只是不符合规范而已。随后我们javac test.java,然后再&lt;del&gt;java test&lt;/del&gt;。&lt;/p&gt;
+&lt;p&gt;java test这个操作是错误的，让我们看看javac test.java之后产生了什么文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/index.png&#34;
+	width=&#34;1096&#34;
+	height=&#34;87&#34;
+	srcset=&#34;https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/index_hu_3edcd4a41e51603a.png 480w, https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/index_hu_79ebaa3fdbc63e8c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;index&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1259&#34;
+		data-flex-basis=&#34;3023px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h6 id=&#34;所以java-simpledemo才是正确的操作&#34;&gt;所以java SimpleDemo才是正确的操作
+&lt;/h6&gt;&lt;h5 id=&#34;此外java是大小写敏感的语言这意味着-myclass-和-myclass-会被视为两个不同的标识符因此文件名必须精确匹配类名的大小写&#34;&gt;此外Java是大小写敏感的语言，这意味着 &lt;code&gt;MyClass&lt;/code&gt; 和 &lt;code&gt;myclass&lt;/code&gt; 会被视为两个不同的标识符。因此，文件名必须精确匹配类名的大小写。
+&lt;/h5&gt;&lt;p&gt;虽然你可以将不带 &lt;code&gt;public&lt;/code&gt; 修饰符的 &lt;code&gt;SimpleDemo&lt;/code&gt; 类放在名为 &lt;code&gt;test.java&lt;/code&gt; 的文件中，但这并不符合常见的最佳实践。按照最佳实践，即便类不是 &lt;code&gt;public&lt;/code&gt; 的，最好还是让文件名与类名保持一致，即命名为 &lt;code&gt;SimpleDemo.java&lt;/code&gt;，这样有助于提高代码的可读性和维护性。此外，遵循这些惯例也使得项目更易于被其他开发者理解。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;总之严格遵守java的文件和类命名规则不仅有助于编写高质量的代码还能提升开发效率降低维护成本并确保应用程序的稳定性和扩展性这些规则是构建大型复杂系统的基础也是实现良好软件工程实践的重要组成部分&#34;&gt;总之，严格遵守Java的文件和类命名规则不仅有助于编写高质量的代码，还能提升开发效率，降低维护成本，并确保应用程序的稳定性和扩展性。这些规则是构建大型复杂系统的基础，也是实现良好软件工程实践的重要组成部分。
+&lt;/h5&gt;</description>
         </item>
         <item>
         <title>Test</title>
