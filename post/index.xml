@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lin100101</copyright>
-        <lastBuildDate>Wed, 26 Feb 2025 18:30:15 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 11 Jun 2025 22:45:16 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Test01</title>
+        <link>https://Lin100101.github.io/p/test01/</link>
+        <pubDate>Wed, 11 Jun 2025 22:45:16 +0800</pubDate>
+        
+        <guid>https://Lin100101.github.io/p/test01/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>探索Java：无Public类时的文件命名与执行指南</title>
         <link>https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/</link>
         <pubDate>Wed, 26 Feb 2025 18:30:15 +0800</pubDate>
