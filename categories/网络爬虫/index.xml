@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Lin100101</title>
-        <link>https://Lin100101.github.io/</link>
-        <description>Recent content on Lin100101</description>
+        <title>网络爬虫 on Lin100101</title>
+        <link>https://Lin100101.github.io/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</link>
+        <description>Recent content in 网络爬虫 on Lin100101</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lin100101</copyright>
-        <lastBuildDate>Sun, 22 Jun 2025 23:31:24 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Jun 2025 23:31:24 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>图片下载系统</title>
         <link>https://Lin100101.github.io/p/%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 22 Jun 2025 23:31:24 +0800</pubDate>
@@ -153,52 +153,6 @@
 &lt;p&gt;如需完整代码与运行演示，可在&lt;a class=&#34;link&#34; href=&#34;https://github.com/Lin100101/Image-crawler&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub 仓库&lt;/a&gt;查看。&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://Lin100101.github.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://Lin100101.github.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>https://Lin100101.github.io/%E5%85%B3%E4%BA%8E/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Lin100101.github.io/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;h1 id=&#34;关于我&#34;&gt;关于我
-&lt;/h1&gt;&lt;p&gt;你好！我是Lin100101，欢迎来到我的个人博客。在这里，我会分享一些关于编程的想法、经验和学习笔记。希望通过这些分享能够帮助到有相同兴趣的朋友，并与大家交流心得。&lt;/p&gt;
-&lt;h2 id=&#34;背景&#34;&gt;背景
-&lt;/h2&gt;&lt;p&gt;我目前是一名主修软件工程专业的本科学生。&lt;/p&gt;
-&lt;h2 id=&#34;博客目的&#34;&gt;博客目的
-&lt;/h2&gt;&lt;p&gt;创建这个博客的主要目的是为了记录我的成长历程、分享所学知识以及探索过程中的点滴。&lt;/p&gt;
-&lt;h2 id=&#34;联系方式&#34;&gt;联系方式
-&lt;/h2&gt;&lt;p&gt;如果你对我的文章有任何疑问或建议，或者只是想打个招呼，请随时通过以下方式联系我：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;邮箱: &lt;a class=&#34;link&#34; href=&#34;mailto:2410348705@qq.com&#34; &gt;2410348705@qq.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Lin100101&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Lin100101 (Lin100101)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;感谢你的访问和支持！希望你能在这个博客中找到对你有用的信息。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://Lin100101.github.io/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Lin100101.github.io/search/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>友情链接</title>
-        <link>https://Lin100101.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Lin100101.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</guid>
-        <description></description>
         </item>
         
     </channel>

@@ -7,15 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lin100101</copyright>
-        <lastBuildDate>Wed, 26 Feb 2025 18:30:15 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Jun 2025 23:31:24 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Java</title>
         <link>https://Lin100101.github.io/categories/java/</link>
-        <pubDate>Wed, 26 Feb 2025 18:30:15 +0800</pubDate>
+        <pubDate>Sun, 22 Jun 2025 23:31:24 +0800</pubDate>
         
         <guid>https://Lin100101.github.io/categories/java/</guid>
         <description>&lt;img src="https://Lin100101.github.io/categories/java/Java.png" alt="Featured image of post Java" /&gt;&lt;h1 id=&#34;欢迎来到java分类界面&#34;&gt;欢迎来到Java分类界面
 &lt;/h1&gt;&lt;p&gt;在这里，我相信无论你是初学者还是有经验的开发者，都可以在这里发现有价值的内容。&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>网络爬虫</title>
+        <link>https://Lin100101.github.io/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</link>
+        <pubDate>Sun, 22 Jun 2025 23:31:24 +0800</pubDate>
+        
+        <guid>https://Lin100101.github.io/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</guid>
+        <description>&lt;img src="https://Lin100101.github.io/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB.png" alt="Featured image of post 网络爬虫" /&gt;</description>
         </item>
         
     </channel>

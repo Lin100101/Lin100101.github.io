@@ -7,22 +7,73 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lin100101</copyright>
-        <lastBuildDate>Wed, 11 Jun 2025 22:45:16 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test01</title>
-        <link>https://Lin100101.github.io/p/test01/</link>
-        <pubDate>Wed, 11 Jun 2025 22:45:16 +0800</pubDate>
+        <lastBuildDate>Sun, 22 Jun 2025 23:31:24 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图片下载系统</title>
+        <link>https://Lin100101.github.io/p/%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F/</link>
+        <pubDate>Sun, 22 Jun 2025 23:31:24 +0800</pubDate>
         
-        <guid>https://Lin100101.github.io/p/test01/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>探索Java：无Public类时的文件命名与执行指南</title>
-        <link>https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/</link>
-        <pubDate>Wed, 26 Feb 2025 18:30:15 +0800</pubDate>
-        
-        <guid>https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/</guid>
-        <description>&lt;h5 id=&#34;java作为一种广泛使用的面向对象编程语言其设计和规范中包含了一系列严格的文件和类命名规则这些规则对于确保代码的可读性可维护性和互操作性至关重要&#34;&gt;Java作为一种广泛使用的面向对象编程语言，其设计和规范中包含了一系列严格的文件和类命名规则。这些规则对于确保代码的可读性、可维护性和互操作性至关重要。
-&lt;/h5&gt;&lt;p&gt;例如：如果一个 Java 文件中包含了一个 &lt;code&gt;public&lt;/code&gt; 类，那么这个文件的名称必须与这个 &lt;code&gt;public&lt;/code&gt; 类的名称完全相同。这是Java语言的一个强制性规则。例如，如果你有一个 &lt;code&gt;public class SimpleDemo&lt;/code&gt;，那么这个类必须保存在名为 &lt;code&gt;SimpleDemo.java&lt;/code&gt; 的文件中。&lt;/p&gt;
+        <guid>https://Lin100101.github.io/p/%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F/</guid>
+        <description>&lt;h1 id=&#34;网页图片下载系统&#34;&gt;网页图片下载系统
+&lt;/h1&gt;&lt;h4 id=&#34;项目简介&#34;&gt;&lt;strong&gt;项目简介&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;这是一个基于 Java 开发的图形界面网页图片爬虫系统，实现了从指定网页中爬取图片 URL、获取图片信息，并支持批量下载的功能。系统采用 MVC 架构设计，结合多线程技术与抗反爬策略，解决了传统爬虫界面卡顿、请求被拦截等问题，适合作为 Java 网络编程、GUI 开发及多线程技术的课程设计实践案例。&lt;/p&gt;
+&lt;h4 id=&#34;项目采用技术&#34;&gt;&lt;strong&gt;项目采用技术&lt;/strong&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;核心技术栈&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Java SE 21&lt;/strong&gt;：基础语言环境，支持 Lambda 表达式、并发包等特性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swing&lt;/strong&gt;：构建图形界面，包含 JFrame、JList、JProgressBar 等组件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jsoup&lt;/strong&gt;：HTML 解析库，用于提取网页中的图片元素及 URL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多线程技术&lt;/strong&gt;：SwingWorker 异步任务处理、ExecutorService 线程池控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关键技术点&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;网络请求优化&lt;/strong&gt;：通过自定义请求头模拟浏览器行为（User-Agent、Accept 等），防止 403 错误&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;异步处理架构&lt;/strong&gt;：分离 UI 线程与工作线程，保证界面响应性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;并发控制&lt;/strong&gt;：线程池限制下载并发数，避免网络资源耗尽&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件操作&lt;/strong&gt;：智能文件名生成、图片流高效读写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;功能需求分析&#34;&gt;&lt;strong&gt;功能需求分析&lt;/strong&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;基础爬取功能&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;输入网页 URL 并爬取所有图片元素&lt;/li&gt;
+&lt;li&gt;提取图片绝对 URL 及大小信息（通过 HTTP HEAD 请求）&lt;/li&gt;
+&lt;li&gt;按图片尺寸降序排序，优先展示高质量图片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;下载管理功能&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;支持单图下载、选中图片批量下载、全部图片下载&lt;/li&gt;
+&lt;li&gt;自定义保存目录，智能生成文件名（防重名）&lt;/li&gt;
+&lt;li&gt;实时显示下载进度、状态及错误日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;界面交互需求&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;清晰的图片列表展示（URL + 大小）&lt;/li&gt;
+&lt;li&gt;实时日志输出爬取 / 下载过程&lt;/li&gt;
+&lt;li&gt;进度条与状态标签可视化反馈任务状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;非功能需求&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;抗反爬机制：模拟浏览器请求头，避免被网站拦截&lt;/li&gt;
+&lt;li&gt;稳定性：异常处理、错误重试与日志记录&lt;/li&gt;
+&lt;li&gt;性能：多线程并发处理，提升爬取 / 下载效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;项目亮点&#34;&gt;*&lt;strong&gt;项目亮点&lt;/strong&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;多线程异步处理架构&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;采用&lt;code&gt;SwingWorker&lt;/code&gt;实现爬取任务与 UI 线程分离，避免界面卡顿；&lt;/li&gt;
+&lt;li&gt;下载模块使用&lt;code&gt;ExecutorService&lt;/code&gt;线程池控制并发（最大 5 线程），平衡网络资源与性能。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -30,62 +81,77 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SimpleDemo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;这是一个简单的Java程序。&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 爬取任务异步处理示例&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SwingWorker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImageInfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Void&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SwingWorker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImageInfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;doInBackground&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Exception&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 耗时的爬取逻辑（Jsoup解析、网络请求）&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;execute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 启动后台任务&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;抗反爬机制与网络优化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;预设完整请求头模拟浏览器行为，解决 403 访问限制；&lt;/li&gt;
+&lt;li&gt;爬取图片大小时使用&lt;code&gt;HEAD&lt;/code&gt;请求，避免下载完整图片数据，减少流量消耗。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 请求头配置（防止403错误）&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;REQUEST_HEADERS&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HashMap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;REQUEST_HEADERS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;put&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;User-Agent&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Mozilla/5.0 (Windows NT 10.0...&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;REQUEST_HEADERS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;put&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Accept&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/html,application/xhtml+xml...&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 更多请求头配置...&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在这种情况下，编译完后的class文件名也是SimpleDemo。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h6 id=&#34;如果-java-文件中没有-public-类则文件名可以是任意的尽管通常的做法是根据文件中最重要的类来命名文件以提高代码的可读性和可维护性&#34;&gt;如果 Java 文件中没有 &lt;code&gt;public&lt;/code&gt; 类，则文件名可以是任意的，尽管通常的做法是根据文件中最重要的类来命名文件，以提高代码的可读性和可维护性。
-&lt;/h6&gt;&lt;p&gt;此时我们要把一个包含有一个名叫SimpleDemo非public的类的Java文件名改成test.java,这种操作是没错的，只是不符合规范而已。随后我们javac test.java,然后再&lt;del&gt;java test&lt;/del&gt;。&lt;/p&gt;
-&lt;p&gt;java test这个操作是错误的，让我们看看javac test.java之后产生了什么文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/index.png&#34;
-	width=&#34;1096&#34;
-	height=&#34;87&#34;
-	srcset=&#34;https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/index_hu_3edcd4a41e51603a.png 480w, https://Lin100101.github.io/p/%E6%8E%A2%E7%B4%A2java%E6%97%A0public%E7%B1%BB%E6%97%B6%E7%9A%84%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%8C%87%E5%8D%97/index_hu_79ebaa3fdbc63e8c.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;index&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1259&#34;
-		data-flex-basis=&#34;3023px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h6 id=&#34;所以java-simpledemo才是正确的操作&#34;&gt;所以java SimpleDemo才是正确的操作
-&lt;/h6&gt;&lt;h5 id=&#34;此外java是大小写敏感的语言这意味着-myclass-和-myclass-会被视为两个不同的标识符因此文件名必须精确匹配类名的大小写&#34;&gt;此外Java是大小写敏感的语言，这意味着 &lt;code&gt;MyClass&lt;/code&gt; 和 &lt;code&gt;myclass&lt;/code&gt; 会被视为两个不同的标识符。因此，文件名必须精确匹配类名的大小写。
-&lt;/h5&gt;&lt;p&gt;虽然你可以将不带 &lt;code&gt;public&lt;/code&gt; 修饰符的 &lt;code&gt;SimpleDemo&lt;/code&gt; 类放在名为 &lt;code&gt;test.java&lt;/code&gt; 的文件中，但这并不符合常见的最佳实践。按照最佳实践，即便类不是 &lt;code&gt;public&lt;/code&gt; 的，最好还是让文件名与类名保持一致，即命名为 &lt;code&gt;SimpleDemo.java&lt;/code&gt;，这样有助于提高代码的可读性和维护性。此外，遵循这些惯例也使得项目更易于被其他开发者理解。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h5 id=&#34;总之严格遵守java的文件和类命名规则不仅有助于编写高质量的代码还能提升开发效率降低维护成本并确保应用程序的稳定性和扩展性这些规则是构建大型复杂系统的基础也是实现良好软件工程实践的重要组成部分&#34;&gt;总之，严格遵守Java的文件和类命名规则不仅有助于编写高质量的代码，还能提升开发效率，降低维护成本，并确保应用程序的稳定性和扩展性。这些规则是构建大型复杂系统的基础，也是实现良好软件工程实践的重要组成部分。
-&lt;/h5&gt;</description>
-        </item>
-        <item>
-        <title>Test</title>
-        <link>https://Lin100101.github.io/p/test/</link>
-        <pubDate>Wed, 29 Jan 2025 15:01:31 +0800</pubDate>
-        
-        <guid>https://Lin100101.github.io/p/test/</guid>
-        <description>&lt;h3 id=&#34;test&#34;&gt;test
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/test/test.jpg&#34;
-	width=&#34;640&#34;
-	height=&#34;640&#34;
-	srcset=&#34;https://Lin100101.github.io/p/test/test_hu_8a57a4eccf2657e3.jpg 480w, https://Lin100101.github.io/p/test/test_hu_8abb33565950b1fc.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;test&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;100&#34;
-		data-flex-basis=&#34;240px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用户体验精细化设计&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实时日志系统：动态记录爬取和下载的每一步操作；&lt;/li&gt;
+&lt;li&gt;进度可视化：通过&lt;code&gt;JProgressBar&lt;/code&gt;和状态标签实时显示任务进度；&lt;/li&gt;
+&lt;li&gt;智能默认选择：爬取完成后自动选中前 5 张图片，减少用户操作成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;完善的错误处理与鲁棒性&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多层输入验证（URL 非空、图片选择状态等），并通过对话框提示错误；&lt;/li&gt;
+&lt;li&gt;下载失败时记录具体 URL 与异常信息，最终生成统计报告（成功 / 失败数量）；&lt;/li&gt;
+&lt;li&gt;文件名生成策略：优先使用 URL 原始名称，无效时自动生成 UUID 命名，避免文件冲突。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;功能完整性与扩展性&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持单图 / 批量下载两种模式，满足不同场景需求；&lt;/li&gt;
+&lt;li&gt;代码结构采用分层设计（UI 层、爬取层、下载层），模块解耦便于后续扩展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;项目总结与延伸思考&#34;&gt;&lt;strong&gt;项目总结与延伸思考&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;该课程设计不仅实现了网页图片爬取的核心功能，更通过多线程、网络优化等技术提升了系统的实用性与稳定性。未来可进一步拓展功能，如添加代理 IP 池应对严格反爬、集成图片预览与格式过滤、甚至拓展为分布式爬虫系统。这一实践加深了对 Java 网络编程、GUI 开发及并发控制的理解，为后续复杂项目开发奠定了基础。&lt;/p&gt;
+&lt;p&gt;如需完整代码与运行演示，可在&lt;a class=&#34;link&#34; href=&#34;https://github.com/Lin100101/Image-crawler&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 仓库&lt;/a&gt;查看。&lt;/p&gt;
 </description>
         </item>
         
