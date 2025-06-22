@@ -8,11 +8,11 @@
         <language>zh-cn</language>
         <copyright>Lin100101</copyright>
         <lastBuildDate>Sun, 22 Jun 2025 23:31:24 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>图片下载系统</title>
-        <link>https://Lin100101.github.io/p/%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F/</link>
+        <title>网页图片下载系统</title>
+        <link>https://Lin100101.github.io/p/%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 22 Jun 2025 23:31:24 +0800</pubDate>
         
-        <guid>https://Lin100101.github.io/p/%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://Lin100101.github.io/p/%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;网页图片下载系统&#34;&gt;网页图片下载系统
 &lt;/h1&gt;&lt;h4 id=&#34;项目简介&#34;&gt;&lt;strong&gt;项目简介&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;这是一个基于 Java 开发的图形界面网页图片爬虫系统，实现了从指定网页中爬取图片 URL、获取图片信息，并支持批量下载的功能。系统采用 MVC 架构设计，结合多线程技术与抗反爬策略，解决了传统爬虫界面卡顿、请求被拦截等问题，适合作为 Java 网络编程、GUI 开发及多线程技术的课程设计实践案例。&lt;/p&gt;
