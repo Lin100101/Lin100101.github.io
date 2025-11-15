@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在本教程中，将会安装vscode，并且下载相关C/C++插件，配置完vscode后。你能够在vscode上编写运行并且调试C/C++代码。\n那么，我们开始吧。\n">
+<title>VS Code 配置 C/C&#43;&#43; 编程运行环境</title>
+
+<link rel='canonical' href='https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/'>
+
+<link rel="stylesheet" href="/scss/style.min.6ba8b9ea95cedbd14d34969a3a28210289d3a74cba725c37699a1455f78e7135.css"><meta property='og:title' content="VS Code 配置 C/C++ 编程运行环境">
+<meta property='og:description' content="在本教程中，将会安装vscode，并且下载相关C/C++插件，配置完vscode后。你能够在vscode上编写运行并且调试C/C++代码。\n那么，我们开始吧。\n">
+<meta property='og:url' content='https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/'>
+<meta property='og:site_name' content='Lin100101'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-11-15T21:39:59&#43;08:00'/><meta property='article:modified_time' content='2025-11-15T21:39:59&#43;08:00'/>
+<meta name="twitter:title" content="VS Code 配置 C/C++ 编程运行环境">
+<meta name="twitter:description" content="在本教程中，将会安装vscode，并且下载相关C/C++插件，配置完vscode后。你能够在vscode上编写运行并且调试C/C++代码。\n那么，我们开始吧。\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    </head>
+    
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_59ba3a15612650d8.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">📖</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Lin100101</a></h1>
+            <h2 class="site-description">前途是光明的，道路是曲折的</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/397533591'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" id="Brand-Bilibili--Streamline-Tabler" height="24" width="24">
+  <desc>
+    Brand Bilibili Streamline Icon: https://streamlinehq.com
+  </desc>
+  <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4H7a4 4 0 0 1 -4 -4v-6z" stroke-width="2"></path>
+  <path d="m8 3 2 3" stroke-width="2"></path>
+  <path d="m16 3 -2 3" stroke-width="2"></path>
+  <path d="M9 13v-2" stroke-width="2"></path>
+  <path d="M15 11v2" stroke-width="2"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/Lin100101'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1下载vscode">1.下载vscode</a></li>
+        <li><a href="#2下载gcc">2.下载gcc</a></li>
+        <li><a href="#3vscode设置">3.vscode设置</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/">VS Code 配置 C/C&#43;&#43; 编程运行环境</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div class="article-meta" style="display: flex; align-items: center; gap: 0.7em; font-size: 0.95em; color: var(--color-secondary);">
+                <time class="article-time--published" datetime='2025-11-15T21:39:59&#43;08:00'>
+                    📅&thinsp;2025-11-15</time>
+               
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+
+    
+    
+    <p>在本教程中，将会安装vscode，并且下载相关C/C++插件，配置完vscode后。你能够在vscode上编写运行并且调试C/C++代码。</p>
+<p>那么，我们开始吧。</p>
+<h3 id="1下载vscode">1.下载vscode
+</h3><p>在vscode官网下载你的系统相对应的vscode.</p>
+<p>点击此链接进入vscode官网&mdash;&gt;<a class="link" href="https://code.visualstudio.com/"  target="_blank" rel="noopener"
+    >Visual Studio Code - The open source AI code editor</a></p>
+<p>vscode官网页面如图所示：</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91.png"
+	width="2396"
+	height="1465"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91_hu_2763a4234c3784.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91_hu_2a552087de59a038.png 1024w"
+	loading="lazy"
+	
+		alt="vscode官网如图所示"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="392px"
+	
+></p>
+<p>下载完成后，点击安装程序，进行安装。</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD.png"
+	width="191"
+	height="226"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD_hu_63aa73f2e13498b9.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD_hu_9747e6319241c7e0.png 1024w"
+	loading="lazy"
+	
+		alt="vscode下载程序"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="84"
+		data-flex-basis="202px"
+	
+></p>
+<p>点击“我同意”之后点击“下一步”</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501.png"
+	width="890"
+	height="672"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501_hu_ac2d7a6026ff38ba.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501_hu_892019cc337eb0af.png 1024w"
+	loading="lazy"
+	
+		alt="vscode安装过程01"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="132"
+		data-flex-basis="317px"
+	
+></p>
+<p>选择安装位置，然后点击“下一步”</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502.png"
+	width="894"
+	height="672"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502_hu_37e894098c6395f9.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502_hu_7d2eda95d0f55f40.png 1024w"
+	loading="lazy"
+	
+		alt="vscode安装02"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="319px"
+	
+></p>
+<p>点击“下一步”</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503.png"
+	width="894"
+	height="670"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503_hu_d28c54999be1dd21.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503_hu_404e052f71aada4b.png 1024w"
+	loading="lazy"
+	
+		alt="vscode安装03"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>以下所有选项全部勾选</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504.png"
+	width="899"
+	height="665"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504_hu_6b5ef8c19364e0f5.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504_hu_98daf742869e5278.png 1024w"
+	loading="lazy"
+	
+		alt="vscode安装过程04"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="324px"
+	
+></p>
+<p>点击安装</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505.png"
+	width="891"
+	height="676"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505_hu_4765f70d066a0b3e.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505_hu_9d25fb1f1a84e6ba.png 1024w"
+	loading="lazy"
+	
+		alt="vscode安装过程05"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="131"
+		data-flex-basis="316px"
+	
+></p>
+<p>至此，vscode安装完毕，下面我们开始vscode的相关配置</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506.png"
+	width="893"
+	height="676"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506_hu_eba4082efc83f430.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506_hu_a52689b5ceeb9a20.png 1024w"
+	loading="lazy"
+	
+		alt="vscode安装06"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="132"
+		data-flex-basis="317px"
+	
+></p>
+<h3 id="2下载gcc">2.下载gcc
+</h3><p>我们通过MSY2来下载gcc,在MSY2的官网上已经演示了下载gcc,详见<a class="link" href="https://www.msys2.org/"  target="_blank" rel="noopener"
+    >MSY2官网</a></p>
+<h3 id="3vscode设置">3.vscode设置
+</h3><p>第一次打开的时候，你的vscode是英文界面，我们可以通过下载汉化插件来实现界面的汉化（不要在意我的背景，这个是我自己设置的，刚开始的时候是纯黑的）</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01.png"
+	width="2559"
+	height="1524"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01_hu_a23778c58e23c0bc.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01_hu_825cc243149a814b.png 1024w"
+	loading="lazy"
+	
+		alt="vscode设置01"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>点击扩展</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02.png"
+	width="2559"
+	height="1524"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02_hu_5388f0b19dc594b0.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02_hu_b6de2a9bf68f8155.png 1024w"
+	loading="lazy"
+	
+		alt="vscode设置02"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>在此搜索“Chinese”</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03.png"
+	width="2559"
+	height="1525"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03_hu_b3f6f1274ace5fa2.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03_hu_fe7cf31b1aa9c27e.png 1024w"
+	loading="lazy"
+	
+		alt="vscode设置03"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>输入“Chinese”后,选择第一个，然后点击下载</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04.png"
+	width="2559"
+	height="1526"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04_hu_ab900d54219c0a69.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04_hu_8b7775064d42b14.png 1024w"
+	loading="lazy"
+	
+		alt="vscode设置04"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>安装完毕后，重启vscode之后就显示中文了</p>
+<p>除此之外，我们还要下载C/C++插件</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6.png"
+	width="2559"
+	height="1527"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6_hu_74f12463842fd4df.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6_hu_d835519a66ff7295.png 1024w"
+	loading="lazy"
+	
+		alt="vscode下载C语言插件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>我们再下载code runner插件，这个插件能够让你使用CTRL+ALT+N来运行代码</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6.png"
+	width="2559"
+	height="1525"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6_hu_4e9bdde48ea5ec21.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6_hu_410666f0b5dc9e0d.png 1024w"
+	loading="lazy"
+	
+		alt="vscode下载Code Runner插件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>在此之前让我帮你设置好Code Runner</p>
+<p>让我们回到首页</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01.png"
+	width="2559"
+	height="1526"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01_hu_a37f3bf77b4789b.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01_hu_9137857b3e467a09.png 1024w"
+	loading="lazy"
+	
+		alt="Code Runner插件设置01"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>然后通过按你的键盘上CTRL + ，这两个键来进入设置界面</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02.png"
+	width="2559"
+	height="1525"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02_hu_d6c70aa64ddeeed4.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02_hu_6fd3be52a37bcd16.png 1024w"
+	loading="lazy"
+	
+		alt="Code Runner插件设置02"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>在搜索栏，搜索Code Runner,然后勾选 Run In Terminal ，Save All Files Before Run ，Save File Before Run</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03.png"
+	width="2559"
+	height="1527"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03_hu_ef0826e0c8ced209.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03_hu_ca81a066899745f9.png 1024w"
+	loading="lazy"
+	
+		alt="Code Runner插件设置03"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>然后再点击“在setting.json中编辑”</p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04.png"
+	width="2559"
+	height="1526"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04_hu_5801ae332cfa0da9.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04_hu_7f0e23bda4e76b0a.png 1024w"
+	loading="lazy"
+	
+		alt="Code Runner插件设置04"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p>设置成这个样子</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;c&#34;</span><span class="err">:</span> <span class="s2">&#34;chcp 65001 &gt; $null; cd $dir; gcc -Wall -Wextra -O2 \&#34;$fileName\&#34; -o \&#34;./bin/$fileNameWithoutExt.exe\&#34;; ./bin/\&#34;$fileNameWithoutExt.exe\&#34;&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;cpp&#34;</span><span class="err">:</span> <span class="s2">&#34;chcp 65001 &gt;nul &amp;&amp; cd $workspaceRoot &amp;&amp; g++ -Wall -g \&#34;$dir$fileName\&#34; -o \&#34;./bin/$fileNameWithoutExt.exe\&#34; &amp;&amp; ./bin/\&#34;$fileNameWithoutExt.exe\&#34;&#34;</span><span class="err">,</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05.png"
+	width="2559"
+	height="1524"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_e35ecb5da2e3727e.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_2213156a733e0b95.png 1024w"
+	loading="lazy"
+	
+		alt="Code Runner插件设置05"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="402px"
+	
+></p>
+<p><strong>为什么要这么设置呢？这行命令用于在 PowerShell 中一键编译并运行 C 程序：先通过 <code>chcp 65001</code> 切换控制台为 UTF-8 编码以避免中文乱码，再切换到源文件目录确保路径正确；接着用 <code>gcc -Wall -Wextra -O2</code> 启用严格警告和优化，将源文件编译为 <code>./bin/</code> 目录下的同名 <code>.exe</code> 可执行文件，保持项目整洁；最后自动运行该程序，实现高效、可靠、用户友好的开发体验。</strong></p>
+<p><strong>不过要注意！！！！！！的一点是要记得在你的文件夹中新建一个名字为“bin”的文件夹，用来存放你的因为源文件编译而产生的同名的.exe文件</strong></p>
+<p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6.png"
+	width="2559"
+	height="1522"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6_hu_90576f3dc3f0d591.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6_hu_b2fe01017121e9ae.png 1024w"
+	loading="lazy"
+	
+		alt="运行C文件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="403px"
+	
+></p>
+<p><strong>至此，我们能够在VSCode中编写并且能够运行C语言代码了，</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="https://giscus.app/client.js"
+        data-repo="Lin100101/Lin100101.github.io"
+        data-repo-id="R_kgDOQSP7oQ"
+        data-category="General"
+        data-category-id="DIC_kwDOQSP7oc4Cxmqt"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+    <div class="busuanzi-footer">
+        <span id="busuanzi_container_site_uv">
+            本站访问量<span id="busuanzi_value_site_pv"></span>次，
+        </span>
+        <span id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>
+    </div>
+        &copy; 
+        
+        2025 Lin100101
+    </section>
+    
+    
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
