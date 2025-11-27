@@ -632,7 +632,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;c&#34;</span><span class="err">:</span> <span class="s2">&#34;chcp 65001 &gt; $null; cd $dir; gcc -Wall -Wextra -O2 \&#34;$fileName\&#34; -o \&#34;./bin/$fileNameWithoutExt.exe\&#34;; ./bin/\&#34;$fileNameWithoutExt.exe\&#34;&#34;</span><span class="err">,</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;cpp&#34;</span><span class="err">:</span> <span class="s2">&#34;chcp 65001 &gt;nul &amp;&amp; cd $workspaceRoot &amp;&amp; g++ -Wall -g \&#34;$dir$fileName\&#34; -o \&#34;./bin/$fileNameWithoutExt.exe\&#34; &amp;&amp; ./bin/\&#34;$fileNameWithoutExt.exe\&#34;&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;cpp&#34;</span><span class="err">:</span> <span class="s2">&#34;chcp 65001 &gt; $null; if (!(Test-Path bin)) { New-Item -ItemType Directory -Name bin | Out-Null }; cd $dir; g++ -Wall -Wextra -O2 -static \&#34;$fileName\&#34; -o \&#34;bin/$fileNameWithoutExt.exe\&#34;; if ($LASTEXITCODE -eq 0) { Write-Host &#39;Running...&#39; -ForegroundColor Green; &amp; \&#34;bin/$fileNameWithoutExt.exe\&#34; } else { Write-Host &#39;Compilation failed!&#39; -ForegroundColor Red }&#34;</span><span class="err">,</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05.png"
