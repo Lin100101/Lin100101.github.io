@@ -15,6 +15,22 @@
         <guid>https://Lin100101.github.io/categories/test/</guid>
         <description>&lt;img src="https://Lin100101.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
+        <item>
+        <title></title>
+        <link>https://Lin100101.github.io/categories/c&#43;&#43;/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://Lin100101.github.io/categories/c&#43;&#43;/</guid>
+        <description>&lt;p&gt;title: &amp;ldquo;C++&amp;rdquo;
+description: &amp;ldquo;Hello World!&amp;rdquo;
+slug: &amp;ldquo;C++&amp;rdquo;
+image: &amp;ldquo;cpp.jpg&amp;rdquo;
+style:
+background: &amp;ldquo;#03A9F4&amp;rdquo;
+color: &amp;ldquo;#fff&amp;rdquo;&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
         
     </channel>
 </rss>
