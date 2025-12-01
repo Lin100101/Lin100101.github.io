@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head>
-	<meta name="generator" content="Hugo 0.150.0"><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前途是光明的，道路是曲折的">
-<title>Lin100101</title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="std:: 指明使用标准库，避免命名冲突。\n这就相当于我的精确指名要见家在xxx的张三，这样就避免了重名的麻烦。\n不写 std:: 行不行？ 行，但容易出事。\n比如你可以写一句：\n1 using namespace std; 意思是：“从现在起，提到名字不用加地址了，直接叫名字就行。”\n">
+<title>为什么我们要在C&#43;&#43;中使用std？</title>
 
-<link rel='canonical' href='https://Lin100101.github.io/'>
+<link rel='canonical' href='https://Lin100101.github.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/'>
 
-<link rel="stylesheet" href="/scss/style.min.6ba8b9ea95cedbd14d34969a3a28210289d3a74cba725c37699a1455f78e7135.css"><meta property='og:title' content="Lin100101">
-<meta property='og:description' content="前途是光明的，道路是曲折的">
-<meta property='og:url' content='https://Lin100101.github.io/'>
+<link rel="stylesheet" href="/scss/style.min.6ba8b9ea95cedbd14d34969a3a28210289d3a74cba725c37699a1455f78e7135.css"><meta property='og:title' content="为什么我们要在C++中使用std？">
+<meta property='og:description' content="std:: 指明使用标准库，避免命名冲突。\n这就相当于我的精确指名要见家在xxx的张三，这样就避免了重名的麻烦。\n不写 std:: 行不行？ 行，但容易出事。\n比如你可以写一句：\n1 using namespace std; 意思是：“从现在起，提到名字不用加地址了，直接叫名字就行。”\n">
+<meta property='og:url' content='https://Lin100101.github.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/'>
 <meta property='og:site_name' content='Lin100101'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-12-01T23:02:39&#43;08:00 '/>
-<meta name="twitter:title" content="Lin100101">
-<meta name="twitter:description" content="前途是光明的，道路是曲折的"><link rel="alternate" type="application/rss&#43;xml" href="https://Lin100101.github.io/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-01T23:02:39&#43;08:00'/><meta property='article:modified_time' content='2025-12-01T23:02:39&#43;08:00'/><meta property='og:image' content='https://Lin100101.github.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/std.png' />
+<meta name="twitter:title" content="为什么我们要在C++中使用std？">
+<meta name="twitter:description" content="std:: 指明使用标准库，避免命名冲突。\n这就相当于我的精确指名要见家在xxx的张三，这样就避免了重名的麻烦。\n不写 std:: 行不行？ 行，但容易出事。\n比如你可以写一句：\n1 using namespace std; 意思是：“从现在起，提到名字不用加地址了，直接叫名字就行。”\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Lin100101.github.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/std.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </head>
     
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -124,7 +126,7 @@
         
         
         
-        <li  class='current' >
+        <li >
             <a href='/' >
                 
                 
@@ -252,61 +254,10 @@
     <aside class="sidebar right-sidebar sticky">
         
             
-                <form action="/search/" class="search-form widget" >
-        <p>
-            <label>搜索</label>
-            <input name="keyword" required placeholder="输入关键词..." />
-        
-            <button title="搜索">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-            </button>
-        </p>
-    </form>
-            
-        
-            
-                <section class="widget archives">
+                
+    <section class="widget archives">
         <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">归档</h2>
-
-        
-        
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="/archives/#2025">
-                        
-                            <span class="year">2025</span>
-                            <span class="count">3</span>
-                        
-                    </a> 
-                </div>
-            
-        </div>
-    </section>
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -316,21 +267,21 @@
 
 
 
-    </div>
-    <h2 class="widget-title section-title">分类</h2>
-
-    <div class="tagCloud-tags">
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
         
-            <a href="/categories/c&#43;&#43;/" class="font_size_2">
-                C&#43;&#43;
-            </a>
-        
-            <a href="/categories/c/" class="font_size_1">
-                C
-            </a>
-        
-    </div>
-</section>
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#不写-std-行不行">不写 <code>std::</code> 行不行？</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
             
         
@@ -338,15 +289,7 @@
 
 
             <main class="main full-width">
-    
-    
-    
-    
-
-    <section class="article-list">
-        
-            
-<article class="has-image">
+    <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
             
@@ -402,98 +345,129 @@
 </div>
 
 </header>
-</article>
-        
-            
-<article class="">
-    <header class="article-header">
 
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/c&#43;&#43;/" style="background-color: #03A9F4; color: #fff;">
-                C&#43;&#43;
-            </a>
-        
-            <a href="/categories/c/" style="background-color: #BBDEFB; color: #fff;">
-                C
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/">VS Code 配置 C/C&#43;&#43; 编程运行环境</a>
-        </h2>
-    
-        
-    </div>
+    <section class="article-content">
 
     
     
-    
-    
-    <footer class="article-time">
-        
-            <div class="article-meta" style="display: flex; align-items: center; gap: 0.7em; font-size: 0.95em; color: var(--color-secondary);">
-                <time class="article-time--published" datetime='2025-11-15T21:39:59&#43;08:00'>
-                    📅&thinsp;2025-11-15</time>
-               
-            </div>
-        
-
-        
-    </footer>
-    
-
-    
+    <p><code>std::</code> 指明使用标准库，避免命名冲突。</p>
+<p>这就相当于我的精确指名要见家在xxx的张三，这样就避免了重名的麻烦。</p>
+<h3 id="不写-std-行不行">不写 <code>std::</code> 行不行？
+</h3><p>行，但容易出事。</p>
+<p>比如你可以写一句：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><p>意思是：“从现在起，提到名字不用加地址了，直接叫名字就行。”</p>
+<p>听起来方便吧？可问题是：</p>
+<p>万一以后来了个新邻居也叫“张三”，或者你朋友来玩，听到“张三”不知道是哪个“张三”……</p>
+<p>在代码里也一样，项目一大，各种库一多，名字一冲突，编译器就懵了，报错还难查。</p>
+<p>写 std:: 就像加标签，告诉程序：“我用的是官方标准的那个工具。”</p>
+<p>虽然多打了几个字，但不会出错、不会混淆、别人一看就懂。</p>
+<p>所以该写的 std:: 别偷懒。</p>
+<blockquote>
+<p>“Explicit is better than implicit.”</p>
+<p>（明确胜于隐含）</p></blockquote>
 
-</header>
-</article>
-        
-            
-<article class="">
-    <header class="article-header">
+</section>
 
-    <div class="article-details">
+
+    <footer class="article-footer">
     
 
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/hello/">Hello</a>
-        </h2>
-    
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div class="article-meta" style="display: flex; align-items: center; gap: 0.7em; font-size: 0.95em; color: var(--color-secondary);">
-                <time class="article-time--published" datetime='2025-11-12T12:15:12&#43;08:00'>
-                    📅&thinsp;2025-11-12</time>
-               
-            </div>
-        
-
-        
     </footer>
-    
+
 
     
-</div>
-
-</header>
 </article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/">
         
-    </section>
-<footer class="site-footer">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">VS Code 配置 C/C&#43;&#43; 编程运行环境</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://giscus.app/client.js"
+        data-repo="Lin100101/Lin100101.github.io"
+        data-repo-id="R_kgDOQSP7oQ"
+        data-category="General"
+        data-category-id="DIC_kwDOQSP7oc4Cxmqt"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
     <section class="copyright">
     <div class="busuanzi-footer">
         <span id="busuanzi_container_site_uv">
@@ -510,6 +484,85 @@
     
     
 </footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
 
             </main>
         </div>
