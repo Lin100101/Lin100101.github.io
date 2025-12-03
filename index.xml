@@ -7,43 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lin100101</copyright>
-        <lastBuildDate>Mon, 01 Dec 2025 23:02:39 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>为什么我们要在C&#43;&#43;中使用std？</title>
-        <link>https://Lin100101.github.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/</link>
-        <pubDate>Mon, 01 Dec 2025 23:02:39 +0800</pubDate>
-        
-        <guid>https://Lin100101.github.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/</guid>
-        <description>&lt;img src="https://Lin100101.github.io/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/std.png" alt="Featured image of post 为什么我们要在C&#43;&#43;中使用std？" /&gt;&lt;p&gt;&lt;code&gt;std::&lt;/code&gt; 指明使用标准库，避免命名冲突。&lt;/p&gt;
-&lt;p&gt;这就相当于我的精确指名要见家在xxx的张三，这样就避免了重名的麻烦。&lt;/p&gt;
-&lt;h3 id=&#34;不写-std-行不行&#34;&gt;不写 &lt;code&gt;std::&lt;/code&gt; 行不行？
-&lt;/h3&gt;&lt;p&gt;行，但容易出事。&lt;/p&gt;
-&lt;p&gt;比如你可以写一句：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;意思是：“从现在起，提到名字不用加地址了，直接叫名字就行。”&lt;/p&gt;
-&lt;p&gt;听起来方便吧？可问题是：&lt;/p&gt;
-&lt;p&gt;万一以后来了个新邻居也叫“张三”，或者你朋友来玩，听到“张三”不知道是哪个“张三”……&lt;/p&gt;
-&lt;p&gt;在代码里也一样，项目一大，各种库一多，名字一冲突，编译器就懵了，报错还难查。&lt;/p&gt;
-&lt;p&gt;写 std:: 就像加标签，告诉程序：“我用的是官方标准的那个工具。”&lt;/p&gt;
-&lt;p&gt;虽然多打了几个字，但不会出错、不会混淆、别人一看就懂。&lt;/p&gt;
-&lt;p&gt;所以该写的 std:: 别偷懒。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Explicit is better than implicit.”&lt;/p&gt;
-&lt;p&gt;（明确胜于隐含）&lt;/p&gt;&lt;/blockquote&gt;
-</description>
-        </item>
-        <item>
-        <title>VS Code 配置 C/C&#43;&#43; 编程运行环境</title>
-        <link>https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
+        <lastBuildDate>Sat, 15 Nov 2025 21:39:59 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VS Code 配置 C 语言编程运行环境</title>
+        <link>https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
         <pubDate>Sat, 15 Nov 2025 21:39:59 +0800</pubDate>
         
-        <guid>https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
+        <guid>https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
         <description>&lt;p&gt;在本教程中，将会安装vscode，并且下载相关C/C++插件，配置完vscode后。你能够在vscode上编写运行并且调试C/C++代码。&lt;/p&gt;
 &lt;p&gt;那么，我们开始吧。&lt;/p&gt;
 &lt;h3 id=&#34;1下载vscode&#34;&gt;1.下载vscode
@@ -51,10 +20,10 @@
 &lt;p&gt;点击此链接进入vscode官网&amp;mdash;&amp;gt;&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Visual Studio Code - The open source AI code editor&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;vscode官网页面如图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91.png&#34;
 	width=&#34;2396&#34;
 	height=&#34;1465&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91_hu_2763a4234c3784.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91_hu_2a552087de59a038.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91_hu_2763a4234c3784.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%98%E7%BD%91_hu_2a552087de59a038.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode官网如图所示&#34;
@@ -66,10 +35,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;下载完成后，点击安装程序，进行安装。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD.png&#34;
 	width=&#34;191&#34;
 	height=&#34;226&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD_hu_63aa73f2e13498b9.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD_hu_9747e6319241c7e0.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD_hu_63aa73f2e13498b9.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BD_hu_9747e6319241c7e0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode下载程序&#34;
@@ -81,10 +50,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;点击“我同意”之后点击“下一步”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501.png&#34;
 	width=&#34;890&#34;
 	height=&#34;672&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501_hu_ac2d7a6026ff38ba.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501_hu_892019cc337eb0af.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501_hu_ac2d7a6026ff38ba.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8501_hu_892019cc337eb0af.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode安装过程01&#34;
@@ -96,10 +65,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;选择安装位置，然后点击“下一步”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502.png&#34;
 	width=&#34;894&#34;
 	height=&#34;672&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502_hu_37e894098c6395f9.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502_hu_7d2eda95d0f55f40.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502_hu_37e894098c6395f9.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8502_hu_7d2eda95d0f55f40.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode安装02&#34;
@@ -111,10 +80,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;点击“下一步”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503.png&#34;
 	width=&#34;894&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503_hu_d28c54999be1dd21.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503_hu_404e052f71aada4b.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503_hu_d28c54999be1dd21.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8503_hu_404e052f71aada4b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode安装03&#34;
@@ -126,10 +95,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;以下所有选项全部勾选&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504.png&#34;
 	width=&#34;899&#34;
 	height=&#34;665&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504_hu_6b5ef8c19364e0f5.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504_hu_98daf742869e5278.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504_hu_6b5ef8c19364e0f5.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8504_hu_98daf742869e5278.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode安装过程04&#34;
@@ -141,10 +110,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;点击安装&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505.png&#34;
 	width=&#34;891&#34;
 	height=&#34;676&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505_hu_4765f70d066a0b3e.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505_hu_9d25fb1f1a84e6ba.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505_hu_4765f70d066a0b3e.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8505_hu_9d25fb1f1a84e6ba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode安装过程05&#34;
@@ -156,10 +125,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;至此，vscode安装完毕，下面我们开始vscode的相关配置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506.png&#34;
 	width=&#34;893&#34;
 	height=&#34;676&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506_hu_eba4082efc83f430.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506_hu_a52689b5ceeb9a20.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506_hu_eba4082efc83f430.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E5%AE%89%E8%A3%8506_hu_a52689b5ceeb9a20.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode安装06&#34;
@@ -175,10 +144,10 @@
     &gt;MSY2官网&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3vscode设置&#34;&gt;3.vscode设置
 &lt;/h3&gt;&lt;p&gt;第一次打开的时候，你的vscode是英文界面，我们可以通过下载汉化插件来实现界面的汉化（不要在意我的背景，这个是我自己设置的，刚开始的时候是纯黑的）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1524&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01_hu_a23778c58e23c0bc.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01_hu_825cc243149a814b.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01_hu_a23778c58e23c0bc.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE01_hu_825cc243149a814b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode设置01&#34;
@@ -190,10 +159,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;点击扩展&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1524&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02_hu_5388f0b19dc594b0.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02_hu_b6de2a9bf68f8155.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02_hu_5388f0b19dc594b0.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE02_hu_b6de2a9bf68f8155.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode设置02&#34;
@@ -205,10 +174,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在此搜索“Chinese”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1525&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03_hu_b3f6f1274ace5fa2.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03_hu_fe7cf31b1aa9c27e.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03_hu_b3f6f1274ace5fa2.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE03_hu_fe7cf31b1aa9c27e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode设置03&#34;
@@ -220,10 +189,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;输入“Chinese”后,选择第一个，然后点击下载&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1526&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04_hu_ab900d54219c0a69.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04_hu_8b7775064d42b14.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04_hu_ab900d54219c0a69.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E8%AE%BE%E7%BD%AE04_hu_8b7775064d42b14.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode设置04&#34;
@@ -236,10 +205,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;安装完毕后，重启vscode之后就显示中文了&lt;/p&gt;
 &lt;p&gt;除此之外，我们还要下载C/C++插件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1527&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6_hu_74f12463842fd4df.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6_hu_d835519a66ff7295.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6_hu_74f12463842fd4df.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDC%E8%AF%AD%E8%A8%80%E6%8F%92%E4%BB%B6_hu_d835519a66ff7295.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode下载C语言插件&#34;
@@ -251,10 +220,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我们再下载code runner插件，这个插件能够让你使用CTRL+ALT+N来运行代码&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1525&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6_hu_4e9bdde48ea5ec21.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6_hu_410666f0b5dc9e0d.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6_hu_4e9bdde48ea5ec21.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/vscode%E4%B8%8B%E8%BD%BDCodeRunner%E6%8F%92%E4%BB%B6_hu_410666f0b5dc9e0d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;vscode下载Code Runner插件&#34;
@@ -267,10 +236,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;在此之前让我帮你设置好Code Runner&lt;/p&gt;
 &lt;p&gt;让我们回到首页&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1526&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01_hu_a37f3bf77b4789b.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01_hu_9137857b3e467a09.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01_hu_a37f3bf77b4789b.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE01_hu_9137857b3e467a09.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Code Runner插件设置01&#34;
@@ -282,10 +251,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;然后通过按你的键盘上CTRL + ，这两个键来进入设置界面&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1525&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02_hu_d6c70aa64ddeeed4.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02_hu_6fd3be52a37bcd16.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02_hu_d6c70aa64ddeeed4.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE02_hu_6fd3be52a37bcd16.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Code Runner插件设置02&#34;
@@ -297,10 +266,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在搜索栏，搜索Code Runner,然后勾选 Run In Terminal ，Save All Files Before Run ，Save File Before Run&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1527&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03_hu_ef0826e0c8ced209.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03_hu_ca81a066899745f9.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03_hu_ef0826e0c8ced209.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE03_hu_ca81a066899745f9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Code Runner插件设置03&#34;
@@ -312,10 +281,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;然后再点击“在setting.json中编辑”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1526&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04_hu_5801ae332cfa0da9.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04_hu_7f0e23bda4e76b0a.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04_hu_5801ae332cfa0da9.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE04_hu_7f0e23bda4e76b0a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Code Runner插件设置04&#34;
@@ -335,10 +304,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cd /d \&amp;#34;$dir\&amp;#34; &amp;amp;&amp;amp; gcc -Wall -Wextra -O2 \&amp;#34;$fileName\&amp;#34; -o \&amp;#34;bin\\$fileNameWithoutExt.exe\&amp;#34; &amp;amp;&amp;amp; \&amp;#34;bin\\$fileNameWithoutExt.exe\&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;530&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_a3038157d16c22ac.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_b7bbbdd1dd965d97.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_a3038157d16c22ac.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_b7bbbdd1dd965d97.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Code Runner插件设置05&#34;
@@ -351,10 +320,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;为什么要这么设置呢？这行命令用于在 PowerShell 中一键编译并运行 C 程序：先通过 &lt;code&gt;chcp 65001&lt;/code&gt; 切换控制台为 UTF-8 编码以避免中文乱码，再切换到源文件目录确保路径正确；接着用 &lt;code&gt;gcc -Wall -Wextra -O2&lt;/code&gt; 启用严格警告和优化，将源文件编译为 &lt;code&gt;./bin/&lt;/code&gt; 目录下的同名 &lt;code&gt;.exe&lt;/code&gt; 可执行文件，保持项目整洁；最后自动运行该程序，实现高效、可靠、用户友好的开发体验。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;不过要注意！！！！！！的一点是要记得在你的文件夹中新建一个名字为“bin”的文件夹，用来存放你的因为源文件编译而产生的同名的.exe文件&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6.png&#34;
 	width=&#34;2559&#34;
 	height=&#34;1522&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6_hu_90576f3dc3f0d591.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6_hu_b2fe01017121e9ae.png 1024w&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6_hu_90576f3dc3f0d591.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/%E8%BF%90%E8%A1%8CC%E6%96%87%E4%BB%B6_hu_b2fe01017121e9ae.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;运行C文件&#34;
@@ -391,7 +360,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://Lin100101.github.io/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;目前我正在学习C++，我会&lt;del&gt;陆续&lt;/del&gt;(随缘)在我的博客网站上更新我在学习过程中对于C++的感悟和想法，但愿我会坚持下去。&lt;/p&gt;
+        <description>&lt;p&gt;目前我正在学习Java，我会&lt;del&gt;陆续&lt;/del&gt;(随缘)在我的博客网站上更新我在学习过程中对于Java的感悟和想法，但愿我会坚持下去。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“Perseverance is not a long race; it is many short races one after another.”&lt;/strong&gt;&lt;/p&gt;
 </description>
         </item>
