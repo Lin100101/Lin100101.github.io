@@ -297,10 +297,6 @@
     
     <header class="article-category">
         
-            <a href="/categories/c&#43;&#43;/" style="background-color: #03A9F4; color: #fff;">
-                C&#43;&#43;
-            </a>
-        
             <a href="/categories/c/" style="background-color: #BBDEFB; color: #fff;">
                 C
             </a>
@@ -628,25 +624,23 @@
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;c&#34;</span><span class="err">:</span> <span class="s2">&#34;chcp 65001 &gt; $null; cd $dir; gcc -Wall -Wextra -O2 \&#34;$fileName\&#34; -o \&#34;./bin/$fileNameWithoutExt.exe\&#34;; ./bin/\&#34;$fileNameWithoutExt.exe\&#34;&#34;</span><span class="err">,</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;cpp&#34;</span><span class="err">:</span> <span class="s2">&#34;chcp 65001 &gt; $null; if (!(Test-Path bin)) { New-Item -ItemType Directory -Name bin | Out-Null }; cd $dir; g++ -Wall -Wextra -O2 -static \&#34;$fileName\&#34; -o \&#34;bin/$fileNameWithoutExt.exe\&#34;; if ($LASTEXITCODE -eq 0) { Write-Host &#39;Running...&#39; -ForegroundColor Green; &amp; \&#34;bin/$fileNameWithoutExt.exe\&#34; } else { Write-Host &#39;Compilation failed!&#39; -ForegroundColor Red }&#34;</span><span class="err">,</span>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;c&#34;</span><span class="err">:</span> <span class="s2">&#34;cd /d \&#34;$dir\&#34; &amp;&amp; gcc -Wall -Wextra -O2 \&#34;$fileName\&#34; -o \&#34;bin\\$fileNameWithoutExt.exe\&#34; &amp;&amp; \&#34;bin\\$fileNameWithoutExt.exe\&#34;&#34;</span><span class="err">,</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><img src="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05.png"
 	width="2559"
-	height="1524"
-	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_e35ecb5da2e3727e.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_2213156a733e0b95.png 1024w"
+	height="530"
+	srcset="/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_a3038157d16c22ac.png 480w, /p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_b7bbbdd1dd965d97.png 1024w"
 	loading="lazy"
 	
 		alt="Code Runner插件设置05"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="167"
-		data-flex-basis="402px"
+		data-flex-grow="482"
+		data-flex-basis="1158px"
 	
 ></p>
 <p><strong>为什么要这么设置呢？这行命令用于在 PowerShell 中一键编译并运行 C 程序：先通过 <code>chcp 65001</code> 切换控制台为 UTF-8 编码以避免中文乱码，再切换到源文件目录确保路径正确；接着用 <code>gcc -Wall -Wextra -O2</code> 启用严格警告和优化，将源文件编译为 <code>./bin/</code> 目录下的同名 <code>.exe</code> 可执行文件，保持项目整洁；最后自动运行该程序，实现高效、可靠、用户友好的开发体验。</strong></p>
@@ -682,39 +676,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%9C%A8c-%E4%B8%AD%E4%BD%BF%E7%94%A8std/std.e4e80977ae35be06ae26a146d713590a_hu_9b9fc7ae65d3d738.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 为什么我们要在C&#43;&#43;中使用std？"
-                        
-                        data-hash="md5-5OgJd641vgauJqFG1xNZCg==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">为什么我们要在C&#43;&#43;中使用std？</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     

@@ -299,25 +299,23 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;chcp 65001 &amp;gt; $null; cd $dir; gcc -Wall -Wextra -O2 \&amp;#34;$fileName\&amp;#34; -o \&amp;#34;./bin/$fileNameWithoutExt.exe\&amp;#34;; ./bin/\&amp;#34;$fileNameWithoutExt.exe\&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cpp&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;chcp 65001 &amp;gt; $null; if (!(Test-Path bin)) { New-Item -ItemType Directory -Name bin | Out-Null }; cd $dir; g++ -Wall -Wextra -O2 -static \&amp;#34;$fileName\&amp;#34; -o \&amp;#34;bin/$fileNameWithoutExt.exe\&amp;#34;; if ($LASTEXITCODE -eq 0) { Write-Host &amp;#39;Running...&amp;#39; -ForegroundColor Green; &amp;amp; \&amp;#34;bin/$fileNameWithoutExt.exe\&amp;#34; } else { Write-Host &amp;#39;Compilation failed!&amp;#39; -ForegroundColor Red }&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;,&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cd /d \&amp;#34;$dir\&amp;#34; &amp;amp;&amp;amp; gcc -Wall -Wextra -O2 \&amp;#34;$fileName\&amp;#34; -o \&amp;#34;bin\\$fileNameWithoutExt.exe\&amp;#34; &amp;amp;&amp;amp; \&amp;#34;bin\\$fileNameWithoutExt.exe\&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05.png&#34;
 	width=&#34;2559&#34;
-	height=&#34;1524&#34;
-	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_e35ecb5da2e3727e.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_2213156a733e0b95.png 1024w&#34;
+	height=&#34;530&#34;
+	srcset=&#34;https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_a3038157d16c22ac.png 480w, https://Lin100101.github.io/p/vs-code-%E9%85%8D%E7%BD%AE-c/c-%E7%BC%96%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/CodeRunner%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE05_hu_b7bbbdd1dd965d97.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Code Runner插件设置05&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;167&#34;
-		data-flex-basis=&#34;402px&#34;
+		data-flex-grow=&#34;482&#34;
+		data-flex-basis=&#34;1158px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;为什么要这么设置呢？这行命令用于在 PowerShell 中一键编译并运行 C 程序：先通过 &lt;code&gt;chcp 65001&lt;/code&gt; 切换控制台为 UTF-8 编码以避免中文乱码，再切换到源文件目录确保路径正确；接着用 &lt;code&gt;gcc -Wall -Wextra -O2&lt;/code&gt; 启用严格警告和优化，将源文件编译为 &lt;code&gt;./bin/&lt;/code&gt; 目录下的同名 &lt;code&gt;.exe&lt;/code&gt; 可执行文件，保持项目整洁；最后自动运行该程序，实现高效、可靠、用户友好的开发体验。&lt;/strong&gt;&lt;/p&gt;
