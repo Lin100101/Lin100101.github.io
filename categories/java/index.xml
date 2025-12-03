@@ -6,6 +6,16 @@
         <description>Recent content in Java on Lin100101</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Lin100101</copyright><atom:link href="https://Lin100101.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Lin100101</copyright>
+        <lastBuildDate>Wed, 12 Nov 2025 12:15:12 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hello</title>
+        <link>https://Lin100101.github.io/p/hello/</link>
+        <pubDate>Wed, 12 Nov 2025 12:15:12 +0800</pubDate>
+        
+        <guid>https://Lin100101.github.io/p/hello/</guid>
+        <description>&lt;h3 id=&#34;hello&#34;&gt;hello
+&lt;/h3&gt;</description>
+        </item>
+        
     </channel>
 </rss>
