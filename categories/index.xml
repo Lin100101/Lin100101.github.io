@@ -7,21 +7,21 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Lin100101</copyright>
-        <lastBuildDate>Thu, 04 Dec 2025 07:06:09 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Java</title>
-        <link>https://Lin100101.github.io/categories/java/</link>
-        <pubDate>Thu, 04 Dec 2025 07:06:09 +0800</pubDate>
-        
-        <guid>https://Lin100101.github.io/categories/java/</guid>
-        <description>&lt;img src="https://Lin100101.github.io/categories/java/Java.png" alt="Featured image of post Java" /&gt;</description>
-        </item>
-        <item>
+        <lastBuildDate>Sat, 15 Nov 2025 21:39:59 +0800</lastBuildDate><atom:link href="https://Lin100101.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>C</title>
         <link>https://Lin100101.github.io/categories/c/</link>
         <pubDate>Sat, 15 Nov 2025 21:39:59 +0800</pubDate>
         
         <guid>https://Lin100101.github.io/categories/c/</guid>
         <description>&lt;img src="https://Lin100101.github.io/categories/c/c.png" alt="Featured image of post C" /&gt;</description>
+        </item>
+        <item>
+        <title>C&#43;&#43;</title>
+        <link>https://Lin100101.github.io/categories/c&#43;&#43;/</link>
+        <pubDate>Wed, 12 Nov 2025 12:15:12 +0800</pubDate>
+        
+        <guid>https://Lin100101.github.io/categories/c&#43;&#43;/</guid>
+        <description>&lt;img src="https://Lin100101.github.io/categories/c&#43;&#43;/cpp.jpg" alt="Featured image of post C&#43;&#43;" /&gt;</description>
         </item>
         
     </channel>
