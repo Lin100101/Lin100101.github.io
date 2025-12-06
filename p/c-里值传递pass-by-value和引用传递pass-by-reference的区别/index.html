@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Greetings from C++ ">
-<title>Hello</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="我们先来看两段C++代码：\n1 2 3 4 5 void swap1(int val1, int val2) { int temp = val1; val1 = val2; val2 = temp; } 1 2 3 4 5 void swap2(int&amp; val1, int&amp; val2) { int temp = val1; val1 = val2; val2 = temp; } 请问我想要让两个变量的值交换，我应该使用swap1还是swap2呢？\n1 2 3 4 5 6 7 int main() { int a = 10; int b = 100; swap(a,b); // swap1 还是 swap2 ? std::cout &lt;&lt; &#34;a:&#34; &lt;&lt; a &lt;&lt; &#34;\\tb:&#34; &lt;&lt; b &lt;&lt; std::endl; return 0; } 经过验证，我们发现使用swap1并不能实现让两个值交换，而swap2能实现，这就引出了我们要讲的值传递和引用传递。\n">
+<title>C&#43;&#43; 里值传递(pass by value)和引用传递(pass by reference)的区别</title>
 
-<link rel='canonical' href='https://Lin100101.github.io/p/hello/'>
+<link rel='canonical' href='https://Lin100101.github.io/p/c-%E9%87%8C%E5%80%BC%E4%BC%A0%E9%80%92pass-by-value%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92pass-by-reference%E7%9A%84%E5%8C%BA%E5%88%AB/'>
 
-<link rel="stylesheet" href="/scss/style.min.6ba8b9ea95cedbd14d34969a3a28210289d3a74cba725c37699a1455f78e7135.css"><meta property='og:title' content="Hello">
-<meta property='og:description' content="Greetings from C++ ">
-<meta property='og:url' content='https://Lin100101.github.io/p/hello/'>
+<link rel="stylesheet" href="/scss/style.min.6ba8b9ea95cedbd14d34969a3a28210289d3a74cba725c37699a1455f78e7135.css"><meta property='og:title' content="C++ 里值传递(pass by value)和引用传递(pass by reference)的区别">
+<meta property='og:description' content="我们先来看两段C++代码：\n1 2 3 4 5 void swap1(int val1, int val2) { int temp = val1; val1 = val2; val2 = temp; } 1 2 3 4 5 void swap2(int&amp; val1, int&amp; val2) { int temp = val1; val1 = val2; val2 = temp; } 请问我想要让两个变量的值交换，我应该使用swap1还是swap2呢？\n1 2 3 4 5 6 7 int main() { int a = 10; int b = 100; swap(a,b); // swap1 还是 swap2 ? std::cout &lt;&lt; &#34;a:&#34; &lt;&lt; a &lt;&lt; &#34;\\tb:&#34; &lt;&lt; b &lt;&lt; std::endl; return 0; } 经过验证，我们发现使用swap1并不能实现让两个值交换，而swap2能实现，这就引出了我们要讲的值传递和引用传递。\n">
+<meta property='og:url' content='https://Lin100101.github.io/p/c-%E9%87%8C%E5%80%BC%E4%BC%A0%E9%80%92pass-by-value%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92pass-by-reference%E7%9A%84%E5%8C%BA%E5%88%AB/'>
 <meta property='og:site_name' content='Lin100101'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-11-12T12:15:12&#43;08:00'/><meta property='article:modified_time' content='2025-11-12T12:15:12&#43;08:00'/>
-<meta name="twitter:title" content="Hello">
-<meta name="twitter:description" content="Greetings from C++ ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-06T10:09:54&#43;08:00'/><meta property='article:modified_time' content='2025-12-06T10:09:54&#43;08:00'/>
+<meta name="twitter:title" content="C++ 里值传递(pass by value)和引用传递(pass by reference)的区别">
+<meta name="twitter:description" content="我们先来看两段C++代码：\n1 2 3 4 5 void swap1(int val1, int val2) { int temp = val1; val1 = val2; val2 = temp; } 1 2 3 4 5 void swap2(int&amp; val1, int&amp; val2) { int temp = val1; val1 = val2; val2 = temp; } 请问我想要让两个变量的值交换，我应该使用swap1还是swap2呢？\n1 2 3 4 5 6 7 int main() { int a = 10; int b = 100; swap(a,b); // swap1 还是 swap2 ? std::cout &lt;&lt; &#34;a:&#34; &lt;&lt; a &lt;&lt; &#34;\\tb:&#34; &lt;&lt; b &lt;&lt; std::endl; return 0; } 经过验证，我们发现使用swap1并不能实现让两个值交换，而swap2能实现，这就引出了我们要讲的值传递和引用传递。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -274,7 +274,9 @@
   <ol>
     <li>
       <ol>
-        <li><a href="#greetings-from-c">Greetings from C++</a></li>
+        <li><a href="#值传递pass-by-value">值传递（pass by value）：</a></li>
+        <li><a href="#引用传递pass-by-reference">引用传递（pass by reference）：</a></li>
+        <li><a href="#综上所述"><strong>综上所述：</strong></a></li>
       </ol>
     </li>
   </ol>
@@ -304,7 +306,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/hello/">Hello</a>
+            <a href="/p/c-%E9%87%8C%E5%80%BC%E4%BC%A0%E9%80%92pass-by-value%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92pass-by-reference%E7%9A%84%E5%8C%BA%E5%88%AB/">C&#43;&#43; 里值传递(pass by value)和引用传递(pass by reference)的区别</a>
         </h2>
     
         
@@ -317,8 +319,8 @@
     <footer class="article-time">
         
             <div class="article-meta" style="display: flex; align-items: center; gap: 0.7em; font-size: 0.95em; color: var(--color-secondary);">
-                <time class="article-time--published" datetime='2025-11-12T12:15:12&#43;08:00'>
-                    📅&thinsp;2025-11-12</time>
+                <time class="article-time--published" datetime='2025-12-06T10:09:54&#43;08:00'>
+                    📅&thinsp;2025-12-06</time>
                
             </div>
         
@@ -336,8 +338,105 @@
 
     
     
-    <h3 id="greetings-from-c">Greetings from C++
-</h3>
+    <p>我们先来看两段C++代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">swap1</span><span class="p">(</span><span class="kt">int</span> <span class="n">val1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">val1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">val1</span> <span class="o">=</span> <span class="n">val2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">val2</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">swap2</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">val1</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">val2</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">val1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">val1</span> <span class="o">=</span> <span class="n">val2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">val2</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>请问我想要让两个变量的值交换，我应该使用swap1还是swap2呢？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span> <span class="c1">// swap1 还是 swap2 ?
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a:&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\t</span><span class="s">b:&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>经过验证，我们发现使用swap1并不能实现让两个值交换，而swap2能实现，这就引出了我们要讲的<strong>值传递</strong>和<strong>引用传递</strong>。</p>
+<hr>
+<h3 id="值传递pass-by-value">值传递（pass by value）：
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">999</span><span class="p">;</span>  <span class="c1">// 改的是“副本”
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>调用时，<strong>把实参的值复制一份</strong>给函数参数 <code>x</code>。</li>
+<li>函数里改的是<strong>拷贝出来的副本</strong>，<strong>不影响原来的变量</strong>。</li>
+<li>就像你复印了一张身份证，然后在复印件上涂改——原件完全没变。</li>
+</ul>
+<h3 id="引用传递pass-by-reference">引用传递（pass by reference）：
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">999</span><span class="p">;</span>  <span class="c1">// 改的是“本尊”！
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>调用时，<strong>没有复制</strong>，<code>x</code> 就是原变量的<strong>另一个名字</strong>。</li>
+<li>函数里对 <code>x</code> 的任何操作，<strong>直接作用在原来的变量上</strong>。</li>
+<li>就像别人叫你“小明”或“阿明”，不管叫哪个名字，<strong>都是你本人</strong>，打你一下你真会疼 😅</li>
+</ul>
+<hr>
+<h3 id="综上所述"><strong>综上所述：</strong>
+</h3><blockquote>
+<p><strong>值传参 → 操作副本，原变量安全；</strong></p>
+<p><strong>引用传参 → 直接操作本体，原变量会被改。</strong></p></blockquote>
+
 </section>
 
 
@@ -361,12 +460,12 @@
             
                 
 <article class="">
-    <a href="/p/c-%E9%87%8C%E5%80%BC%E4%BC%A0%E9%80%92pass-by-value%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92pass-by-reference%E7%9A%84%E5%8C%BA%E5%88%AB/">
+    <a href="/p/hello/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">C&#43;&#43; 里值传递(pass by value)和引用传递(pass by reference)的区别</h2>
+            <h2 class="article-title">Hello</h2>
         </div>
     </a>
 </article>
